@@ -1,0 +1,57 @@
+
+<html>
+
+<style>
+  .box {
+    width : 100%;
+    line-height: 22px;
+    font-size: 20px;
+    background-color: red;
+  }
+
+  .box2 {
+    color: #fff;
+  }
+</style>
+
+<body>
+
+<div id="wrapper"></div>
+
+</body>
+
+<script src="ElementHandler.js"></script>
+
+<script>
+  var elem = document.getElementById('wrapper');
+
+  if (elem) {
+    var wrapper = document.createElement('div');
+    for (var i = 0; i < 10; i++) {
+      //elem.innerHTML += '<input value="value" keyboard="numeric" class="box box2">';
+      ElementHandler.addToWrapper(ElementHandler.createElement({ value : 'value ' + i, attrs : { keyboard : 'numeric', mouse : 'nada'}, type : 'input', classes : ['box', 'box2'], styles : { backgroundColor : '#000', marginBottom : '20px'}}));
+    }
+
+    ElementHandler.addChildsToWrapperElement(elem);
+
+    // creates list
+    var list = ElementHandler.createList();
+    list.addEntry({ text : 'hallo' });
+    ElementHandler.addChildsToWrapperElement(elem, list.getElement());
+
+    // creates table
+    var table = ElementHandler.createTable();
+    table.addRow();
+    table.addCell({ text : 'row 1' });
+    table.addCell({ text : 'row 1' });
+    
+    table.addRow();
+    table.addCell({ text : 'row 2' });
+    table.addCell({ text : 'row 2' });
+    ElementHandler.addChildsToWrapperElement(elem, table.getElement());
+  }
+
+</script>
+
+
+</html>
