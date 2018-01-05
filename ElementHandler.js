@@ -257,7 +257,6 @@ var ElementHandler = (function(document, window) {
     return {
       addRow : addRow,
       addCell : addCell,
-      addCellData : addCellData,
       addCellElement : addCellElement,
       getElement : getElement
     };
