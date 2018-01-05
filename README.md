@@ -18,12 +18,13 @@ or without downloading files like
 ```
 
 ## some Examples
-
+For the following examples, you need this wrapper div element:
 ```html
 <div id="wrapper"></div>
 ```
 
 ### generate default element (with text)
+Generating a default (div) element:
 ```javascript
 var elem = document.getElementById('wrapper');
 
@@ -32,6 +33,7 @@ elem.appendChild(newElem);
 ```
 
 ### generate several elements
+Generating several elements dynamically:
 ```javascript
 var elem = document.getElementById('wrapper');
 
